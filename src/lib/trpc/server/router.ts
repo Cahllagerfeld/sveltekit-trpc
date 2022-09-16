@@ -1,7 +1,7 @@
 import * as trpc from '@trpc/server';
 import { z } from 'zod';
 
-let data: string[] = [];
+let data: string[] = ['Dummy Entry'];
 
 export const router = trpc
 	.router()
