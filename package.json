@@ -16,8 +16,6 @@
 		"@playwright/test": "^1.25.0",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
-		"@trpc/client": "^9.27.2",
-		"@trpc/server": "^9.27.2",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
 		"eslint": "^8.16.0",
@@ -33,5 +31,9 @@
 		"vite": "^3.1.0",
 		"zod": "^3.19.1"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@trpc/client": "^9.27.2",
+		"@trpc/server": "^9.27.2"
+	}
 }
