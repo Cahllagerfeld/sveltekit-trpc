@@ -6,3 +6,4 @@ tasks:
       init: devenv shell
       command: |
         direnv allow
+        devenv up
