@@ -14,7 +14,7 @@ RUN echo '. /home/gitpod/.nix-profile/etc/profile.d/nix.sh' >> /home/gitpod/.bas
 RUN mkdir -p /home/gitpod/.config/nixpkgs && echo '{ allowUnfree = true; }' >> /home/gitpod/.config/nixpkgs/config.nix
 
 # install cachix, devenv and direnv
-RUN nix-env -iA cachix -f https://cachix.org/api/v1/install && cachix use devenv
-RUN nix-env -if https://github.com/cachix/devenv/tarball/v0.2
-RUN nix-env -i direnv && direnv hook bash >> /home/gitpod/.bashrc
+RUN . /home/gitpod/.nix-profile/etc/profile.d/nix.sh && nix-env -iA cachix -f https://cachix.org/api/v1/install && cachix use devenv
+RUN . /home/gitpod/.nix-profile/etc/profile.d/nix.sh && nix-env -if https://github.com/cachix/devenv/tarball/v0.2
+RUN . /home/gitpod/.nix-profile/etc/profile.d/nix.sh && nix-env -i direnv && direnv hook bash >> /home/gitpod/.bashrc
 
