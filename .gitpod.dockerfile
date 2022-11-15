@@ -7,6 +7,6 @@ RUN addgroup --system nixbld && adduser gitpod nixbld && mkdir /nix && chown git
 CMD /bin/bash -l
 USER gitpod
 
-RUN sh <(curl -L https://nixos.org/nix/install) --no-daemon
+RUN curl https://nixos.org/nix/install | sh
 
 RUN mkdir -p /home/gitpod/.config/nixpkgs && echo '{ allowUnfree = true; }' >> /home/gitpod/.config/nixpkgs/config.nix
