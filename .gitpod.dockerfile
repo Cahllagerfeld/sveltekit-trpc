@@ -8,8 +8,7 @@ CMD /bin/bash -l
 USER gitpod
 WORKDIR /home/gitpod
 
-RUN curl -L https://nixos.org/nix/install > install.sh 
+RUN curl -L https://nixos.org/nix/install > install.sh && sh ./install.sh --no-daemon
 
-RUN sh ./install.sh --no-daemon
-
+RUN echo '. /home/gitpod/.nix-profile/etc/profile.d/nix.sh' >> /home/gitpod/.bashrc
 RUN mkdir -p /home/gitpod/.config/nixpkgs && echo '{ allowUnfree = true; }' >> /home/gitpod/.config/nixpkgs/config.nix
