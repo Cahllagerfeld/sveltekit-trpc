@@ -6,8 +6,7 @@
 
 
   enterShell = ''
-    npm install
-    npm i -g pnpm
+    npm install && npm i -g pnpm
   '';
 
   processes = {

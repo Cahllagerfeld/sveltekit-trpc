@@ -3,7 +3,6 @@ image:
 
 tasks:
     - name: nix
-      init: devenv shell
       command: |
         direnv allow
         devenv up
