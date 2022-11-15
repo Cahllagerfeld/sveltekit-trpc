@@ -10,9 +10,9 @@
 
   enterShell = ''
     npm install
-  ''
+  '';
+
   # https://devenv.sh/languages/
   languages.nix.enable = true;
-  languages.typescript.enable = true;
 
 }
