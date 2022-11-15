@@ -1,2 +1,2 @@
-FROM nixos/nix
+FROM gitpod/workspace-base
 
