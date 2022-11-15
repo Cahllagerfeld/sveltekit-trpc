@@ -2,15 +2,19 @@
 
 {
   # https://devenv.sh/packages/
-  packages = [ pkgs.git pkgs.nodejs-16_x ];
+  packages = [
+    pkgs.git
+    pkgs.nodejs-16_x
+    pkgs.nodePackages.pnpm
+  ];
 
 
   enterShell = ''
-    npm install && npm i -g pnpm
+    pnpm install
   '';
 
   processes = {
-    dev.exec = "npm run dev";
+    dev.exec = "pnpm dev";
   };
 
   # https://devenv.sh/languages/
