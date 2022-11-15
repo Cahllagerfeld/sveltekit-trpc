@@ -3,6 +3,4 @@ image:
 
 tasks:
     - name: nix
-      command: |
-        direnv allow
-        devenv up
+      command: devenv up
