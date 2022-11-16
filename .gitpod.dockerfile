@@ -18,6 +18,4 @@ RUN . /home/gitpod/.nix-profile/etc/profile.d/nix.sh && nix-env -iA cachix -f ht
 RUN . /home/gitpod/.nix-profile/etc/profile.d/nix.sh && nix-env -if https://github.com/cachix/devenv/tarball/v0.2
 RUN . /home/gitpod/.nix-profile/etc/profile.d/nix.sh && nix-env -i direnv && direnv hook bash >> /home/gitpod/.bashrc && mkdir -p ~/.config/direnv && echo '[whitelist]' > ~/.config/direnv/config.toml && echo 'prefix = [ "/workspace" ]' >> ~/.config/direnv/config.toml
 
-# configure global npm packages
-RUN echo 'prefix = ${HOME}/.npm-packages' >> ~/.npmrc && export PATH=~/.npm-packages/bin:$PATH && export NODE_PATH=~/.npm-packages/lib/node_modules
 

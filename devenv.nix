@@ -5,16 +5,15 @@
   packages = [
     pkgs.git
     pkgs.nodejs-16_x
-    pkgs.nodePackages.pnpm
   ];
 
 
   enterShell = ''
-    pnpm install
+    npm install
   '';
 
   processes = {
-    dev.exec = "pnpm dev";
+    dev.exec = "npm run dev";
   };
 
   # https://devenv.sh/languages/
